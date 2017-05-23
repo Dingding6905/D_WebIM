@@ -12,7 +12,6 @@ var fetch = function() {
 	// success是可参数，这是一个回调函数，用于处理请求到的数据。
 	// 本函数没有第二个参数，get 请求，回掉函数为响应值
 	$.getJSON("/lp/fetch?lastReceived=" + lastReceived, function(data) {
-		alert("-----")
 		if (data == null) return;
 		// each 遍历数组，i 为数组下标，event 为数组对应该下标的内容。
 		$.each(data, function(i, event) {
@@ -52,11 +51,13 @@ $(document).ready(function () {
 	// 只有当点击 click 时才触发
 	var postConecnt = function () {
 		var uname = $('#uname').text();
+		// 获取输入框中用户输入的内容
 		var content = $('#sendbox').val();
 		$.post("/lp/post", {
 			uname: uname,
 			content: content
 		});
+		// 清空输入框
 		$('#sendbox').val("");
 	}
 	
