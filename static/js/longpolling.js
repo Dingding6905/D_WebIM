@@ -36,6 +36,7 @@ var fetch = function() {
 			
 			lastReceived = event.Timestamp;
 		});
+		
 		isWait = false;
 	});
 }
