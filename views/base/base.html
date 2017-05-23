@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<!-- beego 载入模板 head.html -->
+		{{template "base/head.html" .}}
+		<!-- 引入模板 define "head" 在 welcome.html -->
+		{{template "head" .}}
+	</head>
+	<body>
+		<!-- 调用 welcome.html 中的 body -->
+		{{template "body" .}}
+		{{template "base/footer.html" .}}
+	</body>
+</html>
